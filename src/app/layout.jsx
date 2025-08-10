@@ -9,9 +9,34 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Happy Esho Day!",
-  description: "A special birthday site for Esho 🎉",
+  title: "World Damilare Day!",
+  description: "A special birthday scrapbook site for Esho 🎉",
+  icons: {
+    icon: "/favicon.ico", // favicon in /public
+  },
+  openGraph: {
+    title: "World Damilare Day!",
+    description: "A special birthday scrapbook site for Esho 🎉",
+    url: "https://birthday-scrapbook-six.vercel.app/", // replace with your actual domain
+    siteName: "World Damilare Day!",
+    images: [
+      {
+        url: "https://birthday-scrapbook-six.vercel.app/damilare.png", // absolute URL, 1200x630 recommended
+        width: 1200,
+        height: 630,
+        alt: "World Damilare Day Preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "World Damilare Day!",
+    description: "A special birthday scrapbook site for Esho 🎉",
+    images: ["https://birthday-scrapbook-six.vercel.app/damilare.png"],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
