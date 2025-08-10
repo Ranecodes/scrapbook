@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+
 const AnimatedSquiggly1 = () => (
   <motion.div
     className="absolute top-10 left-10" // Position wherever you want
@@ -59,6 +60,7 @@ export default function DragCarousel({ items }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+ 
 
   const handleVideoClick = (e, videoElement) => {
     e.stopPropagation();
@@ -72,7 +74,7 @@ export default function DragCarousel({ items }) {
 
   return (
     <div className="relative w-full flex justify-center pt-20">
-      
+     
 
       {/* Squiggly Line */}
       <AnimatedSquiggly1 />
@@ -104,25 +106,32 @@ export default function DragCarousel({ items }) {
             let opacity = 1;
 
             // Position cards based on their relative position to current
+            // Only show current card + 2 cards on each side (total of 5 visible cards)
             if (position === 1) {
-              x = 120; // Right side card
+              x = 120; // First right side card
               scale = 0.9;
               rotate = 3;
+              opacity = 0.8;
+            } else if (position === 2) {
+              x = 180; // Second right side card
+              scale = 0.8;
+              rotate = 6;
+              opacity = 0.6;
             } else if (position === items.length - 1) {
-              x = -120; // Left side card
+              x = -120; // First left side card
               scale = 0.9;
               rotate = -3;
-            } else if (position > 1 && position <= Math.floor(items.length / 2)) {
-              x = 120 + (position - 1) * 40; // Stack to the right
-              scale = Math.max(0.7, 0.9 - (position - 1) * 0.1);
-              rotate = 3 + (position - 1) * 2;
-              opacity = Math.max(0.3, 1 - (position - 1) * 0.2);
-            } else if (position > Math.floor(items.length / 2)) {
-              const leftPosition = items.length - position;
-              x = -120 - (leftPosition - 1) * 40; // Stack to the left
-              scale = Math.max(0.7, 0.9 - (leftPosition - 1) * 0.1);
-              rotate = -3 - (leftPosition - 1) * 2;
-              opacity = Math.max(0.3, 1 - (leftPosition - 1) * 0.2);
+              opacity = 0.8;
+            } else if (position === items.length - 2) {
+              x = -180; // Second left side card
+              scale = 0.8;
+              rotate = -6;
+              opacity = 0.6;
+            } else if (position > 2) {
+              // Hide cards that are too far to the right
+              opacity = 0;
+              x = 300;
+              scale = 0.5;
             }
 
             const isCurrent = position === 0;
@@ -145,6 +154,7 @@ export default function DragCarousel({ items }) {
                 className="absolute w-80 h-[500px] overflow-hidden shadow-2xl bg-gray-900"
                 style={{ 
                   zIndex,
+                  
                 }}
               >
                 {isVideo ? (

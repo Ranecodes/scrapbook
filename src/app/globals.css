@@ -58,3 +58,31 @@ body::-webkit-scrollbar {
   scrollbar-width: none;    /* Firefox */
 }
 
+/* Player background */
+.rhap_container {
+  background-color: white !important;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Control buttons (play, pause, skip) */
+.rhap_button-clear {
+  color: #000 !important; /* black icons */
+  background-color: transparent; /* no background circle */
+  border-radius: 50%;
+  padding: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.rhap_button-clear:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* subtle hover effect */
+}
+
+/* Progress bar */
+.rhap_progress-indicator {
+  background-color: #000 !important; /* black knob */
+}
+
+.rhap_progress-filled {
+  background-color: #000 !important; /* black progress fill */
+}

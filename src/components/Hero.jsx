@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useRef } from "react";
 import BestFitSection from "./BestFitSection";
 import TheBoysSection from "./TheBoys";
+import Raneh from "./Raneh";
+import ClosingRemarks from "./ClosingRemarks";
 
 function AnimatedArrow({ pathLength }) {
   return (
@@ -281,7 +283,7 @@ export default function Hero() {
             {/* Left side image - appears on hover */}
             <div className="absolute right-full top-0 mr-8 w-80 h-110 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out transform translate-x-8 group-hover:translate-x-0">
               <Image
-                src="/damilare-2.png"
+                src="/damilare-20.png"
                 alt="Left side image"
                 width={493}
                 height={511}
@@ -291,7 +293,7 @@ export default function Hero() {
 
             {/* Main center image */}
             <Image
-              src="/damilare.png"
+              src="/damilare1.png"
               alt="Baby Damilare in formal wear"
               width={493}
               height={511}
@@ -302,10 +304,10 @@ export default function Hero() {
             {/* Right side image - appears on hover */}
             <div className="absolute left-full top-0 ml-8 w-80 h-110 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out transform -translate-x-8 group-hover:translate-x-0">
               <Image
-                src="/damilare-1.png"
+                src="/damilare-100.png"
                 alt="Right side image"
-                width={493}
-                height={511}
+                width={350}
+                height={300}
                 className="object-cover"
               />
             </div>
@@ -316,7 +318,7 @@ export default function Hero() {
       {/* Third-Section Gallery */}
       <div
         ref={thirdSectionRef}
-        className="relative bg-white"
+        className="relative bg-white pb-30"
         style={{ height: "200vh" }} // Enough height to scroll
       >
         {/* Sticky wrapper: sticks the carousel to viewport while scrolling */}
@@ -332,13 +334,13 @@ export default function Hero() {
                 {/* Ellipse positioned absolutely underneath */}
                 <motion.div
                   className="absolute -left-20 -top-40 z-0"
-                  style={{ width: 400, height: 420 }}
+                  style={{ width: 400, height: 500 }}
                 >
                   <Image
                     src="/ellipse-4.svg"
                     alt="Ellipse"
                     width={400}
-                    height={420}
+                    height={500}
                     style={{ objectFit: "contain" }}
                   />
                 </motion.div>
@@ -384,8 +386,12 @@ export default function Hero() {
         {/* Birthday Wishes From the Boys */}
         <TheBoysSection />
 
-      {/* Optional: Add more sections here */}
-      {/* You can continue adding more sections with similar scroll-triggered animations */}
+
+        {/* And then there's me */}
+        <Raneh />
+
+        {/* Closing Remarks */}
+        <ClosingRemarks />
     </div>
   );
 }

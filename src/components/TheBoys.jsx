@@ -10,6 +10,15 @@ export default function TheBoysSection() {
     "/birthdaywish-2.mp4",
     "/birthdaywish-3.mp4",
     "/birthdaywish-4.mp4",
+    "/birthdaywish-5.mp4",
+    "/theboys-7.mp4",
+    "/theboys-8.mp4",
+    "/theboys-9.mp4",
+    "/theboys-10.mp4",
+    "/theboys-11.mp4",
+    "theboys-12.mp4",
+    "theboys-13.mp4",
+    "theboys-15.mp4",
     "/boys-1.jpg",
     "/boys-2.jpg",
     "/boys-6.mp4",
@@ -38,7 +47,7 @@ export default function TheBoysSection() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-7xl mx-auto mt-30 px-8"
+      className="max-w-7xl mx-auto mt-40 mb-30 px-8"
       style={{ minHeight: "120vh" }} // give scroll room so animation can run
     >
       <div className="mx-auto px-8">
@@ -57,7 +66,7 @@ export default function TheBoysSection() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-sm text-white leading-relaxed max-w-2xl text-center mx-auto"
           >
-            Your boyfriends have some heartfelt birthday wishes for you. Click on the videos to play/pause them. 
+            Your boyfriends have some heartfelt birthday wishes for you. Use keyboard arrows to scroll. 
           </motion.p>
         </div>
 
@@ -66,7 +75,7 @@ export default function TheBoysSection() {
 
         {/* Instructions */}
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">← Drag to scroll • Click videos to play/pause →</p>
+          <p className="text-gray-500 text-sm">← Click videos to play/pause • Use keyboard arrows to scroll →</p>
         </div>
       </div>
     </section>
