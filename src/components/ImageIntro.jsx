@@ -63,7 +63,7 @@ useEffect(() => {
     <div className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Top left text */}
       <div className="absolute top-4 left-4 text-white text-sm font-normal z-20 uppercase">
-        A real nigga's birthday
+        World Damilare Day
       </div>
 
       {images.map((src, index) => {

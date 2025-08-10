@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import BestFitSection from "./BestFitSection";
+import TheBoysSection from "./TheBoys";
 
 function AnimatedArrow({ pathLength }) {
   return (
@@ -155,7 +157,7 @@ export default function Hero() {
       {/* Hero Section */}
       <div className="relative min-h-screen overflow-hidden">
         <div className="absolute top-4 left-4 z-20 text-black text-sm font-normal uppercase">
-          A real nigga's birthday
+          World Damilare Day
         </div>
 
         {/* Background that transitions from black to white */}
@@ -375,6 +377,12 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+        {/* Best Fit Section */}
+        <BestFitSection />
+
+        {/* Birthday Wishes From the Boys */}
+        <TheBoysSection />
 
       {/* Optional: Add more sections here */}
       {/* You can continue adding more sections with similar scroll-triggered animations */}
